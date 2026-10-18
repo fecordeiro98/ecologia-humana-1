@@ -28,7 +28,6 @@ tabelas
 # Análises gráficas -------------------------------------------------------
 
 ## Estilo gráfico ----
-
 estilo_principal <- theme_test() +
   theme(
       plot.title = element_text(hjust = 0.5, size = 14, face = 'bold'),
@@ -39,7 +38,6 @@ estilo_principal <- theme_test() +
   )
 
 ## Criação da função ----
-
 graficos <- function(grupo_var, variavel, pergunta, rotulo_arquivo, rotulo_titulo) {
   sem_na <- dados_fatorados |> drop_na(all_of(grupo_var), all_of(variavel))
   contagens <- sem_na |> count(.data[[grupo_var]])
@@ -83,7 +81,6 @@ graficos <- function(grupo_var, variavel, pergunta, rotulo_arquivo, rotulo_titul
 }
 
 ## Execução da função ----
-
 graficos('genero', 'chateacao', 'O que mais te chatearia?', 'Gênero', '(por gênero)')
 graficos('genero', 'perdoar', 'O que seria mais difícil de perdoar?', 'Gênero', '(por gênero)')
 graficos('genero', 'termino', 'O que aumentaria a probabilidade de término?', 'Gênero', '(por gênero)')
@@ -132,7 +129,6 @@ analises <- function(grupo_var, variavel) {
 }
 
 ### Execução da função ----
-
 analises('genero', 'chateacao')
 analises('genero', 'perdoar')
 analises('genero', 'termino')
