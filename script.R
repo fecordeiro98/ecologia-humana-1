@@ -11,7 +11,7 @@ library(scales) # 1.4.0
 library(tidyverse) # 2.0.0
 
 ## Importação dos dados ----
-dados <- read.csv('dados.csv', header = TRUE, sep = ';', na.strings = '')
+dados <- read.csv('dados.csv', header = TRUE, sep = ',', na.strings = '')
 
 ## Ajuste dos dados ----
 
