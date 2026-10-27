@@ -10,7 +10,7 @@ O script apresentado realiza uma análise descritiva, visual e inferencial sobre
    * `tidyverse` (em especial `dplyr` e `ggplot2`): Manipulação de dados e visualização gráfica.
    * `scales`: Formatação numérica (exibição de porcentagens nos eixos e rótulos).
 2. **Importação e tipagem**:
-   * O arquivo `dados.csv` é lido com separador `;` e campos vazios são convertidos em `NA`.
+   * O arquivo `dados.csv` é lido com separador `,` e campos vazios são convertidos em `NA`.
    * Todas as variáveis são transformadas em **fatores** (`as.factor`) por meio de `mutate(across(everything(), as.factor))`, já que se trata de uma pesquisa com respostas categóricas/qualitativas.
 3. **Verificação de frequências**:
    * Através de `map(dados_fatorados, ~table(.x, useNA = 'no'))`, o script imprime a distribuição de frequências absolutas de cada variável, excluindo valores nulos, permitindo uma checagem rápida do tamanho amostral (N).
